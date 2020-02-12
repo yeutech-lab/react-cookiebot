@@ -348,21 +348,5 @@
     ]
   },
   "declinationId": "react",
-  "contributors": [],
-  "transitive": {
-    "name": "react-cookiebot",
-    "scopedName": "react-cookiebot",
-    "homepage": "https://yeutech-lab.github.io/react-cookiebot",
-    "repository": {
-      "type": "git",
-      "url": "https://github.com/yeutech-lab/react-cookiebot.git"
-    },
-    "bugs": {
-      "url": "https://github.com/yeutech-lab/react-cookiebot/issues"
-    },
-    "publishConfig": {
-      "access": "public",
-      "registry": "https://registry.npmjs.org"
-    }
-  }
+  "contributors": []
 }
