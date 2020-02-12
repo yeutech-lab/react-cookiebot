@@ -2,12 +2,12 @@ This is how it should be used:
 
 ```js
 import { View, Text } from 'react-native';
-const cookieBotDomainGroupId = '7d6b1a1e-8030-4f45-877e-21bb51e9233b';
+const domainGroupId = '7d6b1a1e-8030-4f45-877e-21bb51e9233b';
 
 function App() {
   return (
     <View>
-      <CookieBot cookieBotDomainGroupId={cookieBotDomainGroupId} />
+      <CookieBot domainGroupId={domainGroupId} />
       <Text>
         Has CookieBot: {JSON.stringify(!!document.querySelector('#CookieBot'))}
       </Text>

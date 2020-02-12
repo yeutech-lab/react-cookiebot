@@ -6,12 +6,12 @@ import React from 'react';
 import CookieBot from '../index';
 import CookieBotWeb from '../index.web';
 
-const renderComponentNative = ({ cookieBotDomainGroupId, ...rest } = {}) => shallow(
-  <CookieBot cookieBotDomainGroupId={cookieBotDomainGroupId} {...rest} />
+const renderComponentNative = ({ domainGroupId, ...rest } = {}) => shallow(
+  <CookieBot domainGroupId={domainGroupId} {...rest} />
 );
 
-const renderComponentWeb = ({ cookieBotDomainGroupId, ...rest } = {}) => shallow(
-  <CookieBotWeb cookieBotDomainGroupId={cookieBotDomainGroupId} {...rest} />
+const renderComponentWeb = ({ domainGroupId, ...rest } = {}) => shallow(
+  <CookieBotWeb domainGroupId={domainGroupId} {...rest} />
 );
 
 /* eslint-disable no-console */
@@ -26,7 +26,7 @@ describe('<CookieBot />', () => {
   });
 
   const props = {
-    cookieBotDomainGroupId: '7d6b1a1e-8030-4f45-877e-21bb51e9233b',
+    domainGroupId: '7d6b1a1e-8030-4f45-877e-21bb51e9233b',
   };
   it('should render a null <CookieBot /> on native', () => {
     const renderedComponent = renderComponentNative(props);
@@ -39,11 +39,11 @@ describe('<CookieBot />', () => {
     const cookieDeclaration = renderedComponent.find('#CookieDeclaration');
     expect(renderedComponent.length).toBe(1);
     expect(cookieDeclaration.length).toBe(1);
-    expect(cookieDeclaration.prop('src')).toBe(`https://consent.cookiebot.com/${props.cookieBotDomainGroupId}/cd.js`);
+    expect(cookieDeclaration.prop('src')).toBe(`https://consent.cookiebot.com/${props.domainGroupId}/cd.js`);
     expect(console.warn).not.toHaveBeenCalled();
-    expect(document.querySelector('html > head > #CookieBot').dataset.cbid).toBe(props.cookieBotDomainGroupId);
+    expect(document.querySelector('html > head > #CookieBot').dataset.cbid).toBe(props.domainGroupId);
   });
-  it('should render a null <CookieBotWeb /> on web when no cookieBotDomainGroupId is passed', () => {
+  it('should render a null <CookieBotWeb /> on web when no domainGroupId is passed', () => {
     const renderedComponent = renderComponentWeb();
     const cookieDeclaration = renderedComponent.find('#CookieDeclaration');
     expect(renderedComponent.length).toBe(1);
@@ -51,11 +51,11 @@ describe('<CookieBot />', () => {
   });
   it('should produce a warning', () => {
     console.warn = jest.fn();
-    const cookieBotDomainGroupId = '7d6b1a1e-8077e-21bb51e9233b';
+    const domainGroupId = '7d6b1a1e-8077e-21bb51e9233b';
     const renderedComponent = renderComponentWeb({
-      cookieBotDomainGroupId,
+      domainGroupId,
     });
     expect(renderedComponent.length).toBe(1);
-    expect(console.warn).toHaveBeenCalledWith(`The cookie bot domain group id is ${cookieBotDomainGroupId.length} characters, instead it should be 36 characters!`);
+    expect(console.warn).toHaveBeenCalledWith(`The cookie bot domain group id is ${domainGroupId.length} characters, instead it should be 36 characters!`);
   });
 });
