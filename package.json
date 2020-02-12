@@ -50,7 +50,7 @@
     "react",
     "cookiebot"
   ],
-  "license": "UNLICENSED",
+  "license": "MIT",
   "eslintConfig": {
     "parser": "babel-eslint",
     "extends": "airbnb",
@@ -183,7 +183,7 @@
     "@babel/polyfill": "^7.8.3",
     "@babel/preset-env": "^7.8.4",
     "@babel/preset-react": "^7.8.3",
-    "@rollup-umd/documentation": "^2.0.13",
+    "@rollup-umd/documentation": "^2.1.1",
     "@rollup-umd/ncu": "^1.0.9",
     "@rollup-umd/rollup": "^1.1.1",
     "@semantic-release/changelog": "^5.0.0",
@@ -226,28 +226,28 @@
     "lint-staged": "^10.0.7",
     "pre-commit": "^1.2.2",
     "raf": "^3.4.1",
+    "react": "^16.12.0",
     "react-test-renderer": "^16.12.0",
     "semantic-release": "^17.0.2",
     "toctoc": "^0.3.2",
-    "webpack": "^4.41.5"
+    "webpack": "^4.41.6"
   },
   "dependencies": {
     "@babel/runtime": "^7.8.4",
-    "classnames": "^2.2.6",
-    "prop-types": "^15.7.2",
-    "react": "^16.12.0",
-    "react-dom": "^16.0"
+    "prop-types": "^15.7.2"
   },
-  "peerDependencies": {},
+  "peerDependencies": {
+    "react": "*"
+  },
   "publishConfig": {
-    "tag": "latest",
-    "registry": "https://npm.kopaxgroup.com"
+    "registry": "https://npm.kopaxgroup.com",
+    "tag": "latest"
   },
   "release": {
     "branch": "master",
     "success": false,
     "fail": false,
-    "npmPublish": false,
+    "npmPublish": true,
     "verifyConditions": [
       {
         "path": "@semantic-release/exec",
@@ -349,5 +349,20 @@
   },
   "declinationId": "react",
   "contributors": [],
-  "private": true
+  "transitive": {
+    "name": "react-cookiebot",
+    "scopedName": "react-cookiebot",
+    "homepage": "https://yeutech-lab.github.io/react-cookiebot",
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/yeutech-lab/react-cookiebot.git"
+    },
+    "bugs": {
+      "url": "https://github.com/yeutech-lab/react-cookiebot/issues"
+    },
+    "publishConfig": {
+      "access": "public",
+      "registry": "https://registry.npmjs.org"
+    }
+  }
 }
