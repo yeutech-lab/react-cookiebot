@@ -1,0 +1,68 @@
+language: node_js
+sudo: required
+dist: trusty
+
+# Blocked branch list
+branches:
+  except:
+    - gh-pages # will be deployed to, no need to build it
+
+cache:
+  directories:
+    - node_modules
+
+before_install:
+    - npm install -g npm
+
+stages:
+  - build
+  - test
+  - release
+  - deploy
+
+jobs:
+  include:
+
+    # Job: Build
+    - stage: build
+      node_js:
+        - 'lts/*'
+        - '10'
+        - '8'
+      script:
+        - npx @rollup-umd/build
+    # Job: Test
+    - stage: test
+      node_js:
+        - 'lts/*'
+        - '10'
+        - '8'
+      addons:
+        sonarcloud:
+          organization: $(echo $TRAVIS_REPO_SLUG | awk -F '/' '{print $1}')
+      script:
+        - npx @rollup-umd/test
+
+    # Job: Release
+    - stage: release
+      if: branch = master AND type = push AND fork = false
+      node_js:
+        - 'lts/*'
+      skip_cleanup: true
+      script:
+        - npx semantic-release
+
+    # Job: Page
+    - stage: deploy
+      if: branch = master AND type = push AND fork = false
+      node_js:
+        - 'lts/*'
+      script:
+        - targetVersion=$(git describe --tags `git rev-list --tags --max-count=1`)
+        - npx @rollup-umd/deploy --target-version ${targetVersion}
+      deploy:
+        - provider: pages
+          skip_cleanup: true
+          github_token: $GH_TOKEN  # Set automatically in the settings page of your repository, as a secure variable
+          keep_history: true
+          local_dir: public/
