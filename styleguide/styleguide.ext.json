@@ -21,7 +21,7 @@
     {
       "name": "Usage",
       "components": [
-        "src/index.web.js"
+        "src/[A-Z]*.js"
       ]
     },
     {

@@ -22,24 +22,6 @@ Build the `/lib` directory:
 $ npm run build:lib
 ```
 
-Build the `/dist` directory:
-
-```bash
-$ npm run build:dist
-```
-
-Build the `/dist` directory "uncompressed":
-
-```bash
-$ npm run build:dist:dev
-```
-
-Watch the `/dist` directory:
-
-```bash
-$ npm run build:dist:watch
-```
-
 Watch the `/lib` directory:
 
 ```bash

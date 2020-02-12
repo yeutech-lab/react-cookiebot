@@ -90,20 +90,21 @@ Configure webpack to load extensions `['.web.js', '.js']`:
 This is how it should be used:
 
 ```js
-import { View, Text } from 'react-native';
-const domainGroupId = '7d6b1a1e-8030-4f45-877e-21bb51e9233b';
+ 
+import React, { useState } from 'react';
+import { Button, View, Text } from 'react-native';
+const domainGroupId = 'ecff8d69-d1cb-416f-a86f-ba55b3f38707';
 
 function App() {
+  const [hasCookieBot, setHasCookieBot] = useState(undefined);
   return (
-    <View>
+    <View style={{ flex: 1, alignItems: 'center' }}>
       <CookieBot domainGroupId={domainGroupId} />
-      <Text>
-        Has CookieBot: {JSON.stringify(!!document.querySelector('#CookieBot'))}
+      <Text>Click to test Cookiebot</Text>
+      <Button title="TEST" onPress={() => setHasCookieBot(!!document.querySelector('#CookieBot'))} />
+      <Text style={{ color: 'red', marginVertical: 10 }}>
+        {hasCookieBot && `Has CookieBot: ${JSON.stringify(hasCookieBot)}`}
       </Text>
-      <Text>
-        Has CookieDeclaration: {JSON.stringify(!!document.querySelector('#CookieDeclaration'))}
-      </Text>
-      <Text>Cookie bot is injected in the page if CookieBot and CookieDeclaration are both true!</Text>
     </View>
   );
 }
