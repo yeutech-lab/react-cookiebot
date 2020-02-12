@@ -16,6 +16,7 @@ Cookiebot component for react and react native application
 ## Table of Contents
 
   - [What is cookie bot ?](#what-is-cookie-bot)
+  - [Demo](#demo)
   - [Create a cookie bot account](#create-a-cookie-bot-account)
   - [Configuration](#configuration)
   - [Usage](#usage)
@@ -35,6 +36,10 @@ The General Data Protection Regulation (GDPR) applies to all websites with users
 See what data your website collects and shares with 3rd parties – also useful for CCPA compliance (California Consumer Privacy Act).
 
 Visit their [website](https://www.cookiebot.com)
+
+## Demo
+
+View the [Demo](https://yeutech-lab.github.io/react-cookiebot/)
 
 ## Create a cookie bot account
 
