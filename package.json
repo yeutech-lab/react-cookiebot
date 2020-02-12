@@ -1,6 +1,6 @@
 {
   "name": "react-cookiebot",
-  "version": "1.0.0",
+  "version": "0.0.0-development",
   "description": "Cookiebot component for react and react native application",
   "main": "lib/index.js",
   "homepage": "https://yeutech-lab.github.io/react-cookiebot",
