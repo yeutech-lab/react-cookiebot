@@ -36,7 +36,7 @@ Visit Cookiebot [website](https://www.cookiebot.com)
 
 ## Demo
 
-View the [Demo](https://yeutech-lab.github.io/react-cookiebot/)
+View the [Demo](https://yeutech-lab.github.io/react-cookiebot/#cookiebot)
 
 ## Usage
 
