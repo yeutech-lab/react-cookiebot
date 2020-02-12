@@ -1,9 +1,9 @@
 {
-  "name": "@yeutech/react-cookiebot",
+  "name": "react-cookiebot",
   "version": "1.0.0",
   "description": "Cookiebot component for react and react native application",
   "main": "lib/index.js",
-  "homepage": "https://yeutech.yeutech.com/react-cookiebot",
+  "homepage": "https://yeutech-lab.github.io/react-cookiebot",
   "engines": {
     "node": ">=8"
   },
@@ -35,15 +35,14 @@
     "jsdoc": "jsdoc-documentation --file",
     "prestyleguide": "npm run jsdoc",
     "styleguide": "styleguidist server",
-    "styleguide:build": "styleguidist build",
-    "postinstall": "node -e \"console.log('\\u001b[31m@yeutech/react-cookiebot is deprecated, use react-cookiebot instead.')\" || exit 0"
+    "styleguide:build": "styleguidist build"
   },
   "repository": {
     "type": "git",
-    "url": "https://module.kopaxgroup.com/yeutech/react-cookiebot.git"
+    "url": "https://github.com/yeutech-lab/react-cookiebot.git"
   },
   "bugs": {
-    "url": "https://module.kopaxgroup.com/yeutech/react-cookiebot/issues"
+    "url": "https://github.com/yeutech-lab/react-cookiebot/issues"
   },
   "keywords": [
     "react",
@@ -184,22 +183,18 @@
     "@babel/polyfill": "^7.8.3",
     "@babel/preset-env": "^7.8.4",
     "@babel/preset-react": "^7.8.3",
+    "@rollup-umd/build": "^1.0.3",
+    "@rollup-umd/deploy": "^1.2.2",
     "@rollup-umd/documentation": "^2.1.1",
     "@rollup-umd/ncu": "^1.0.9",
     "@rollup-umd/rollup": "^1.1.1",
+    "@rollup-umd/test": "^1.0.6",
     "@semantic-release/changelog": "^5.0.0",
-    "@semantic-release/exec": "^5.0.0",
     "@semantic-release/git": "^9.0.0",
-    "@semantic-release/gitlab": "^6.0.2",
+    "@semantic-release/github": "^7.0.3",
     "@semantic-release/npm": "^7.0.2",
     "@yeutech-lab/documentation": "^2.0.2",
     "@yeutech-lab/test-polyfill": "^1.1.5",
-    "@yeutech/rollup-umd-ci-build": "^1.0.7",
-    "@yeutech/rollup-umd-ci-deploy": "^1.0.14",
-    "@yeutech/rollup-umd-ci-release": "^1.0.15",
-    "@yeutech/rollup-umd-ci-release-transitive": "^1.3.0",
-    "@yeutech/rollup-umd-ci-test": "^1.0.19",
-    "@yeutech/rollup-umd-scripts": "^2.1.4",
     "babel-eslint": "^10.0.3",
     "babel-jest": "^25.1.0",
     "babel-loader": "^8.0.6",
@@ -241,32 +236,20 @@
     "react": "*"
   },
   "publishConfig": {
-    "registry": "https://npm.kopaxgroup.com",
-    "tag": "latest"
+    "registry": "https://registry.npmjs.org",
+    "tag": "latest",
+    "access": "public"
   },
   "release": {
     "branch": "master",
-    "success": false,
-    "fail": false,
     "npmPublish": true,
     "verifyConditions": [
-      {
-        "path": "@semantic-release/exec",
-        "cmd": "npx @yeutech/rollup-umd-ci-release-transitive verify"
-      },
       "@semantic-release/changelog",
       "@semantic-release/npm",
       "@semantic-release/git",
-      {
-        "path": "@semantic-release/gitlab",
-        "gitlabUrl": "https://module.kopaxgroup.com"
-      }
+      "@semantic-release/github"
     ],
     "prepare": [
-      {
-        "path": "@semantic-release/exec",
-        "cmd": "npx @yeutech/rollup-umd-ci-release-transitive prepare"
-      },
       "@semantic-release/changelog",
       "@semantic-release/npm",
       {
@@ -283,12 +266,49 @@
     "publish": [
       "@semantic-release/npm",
       {
-        "path": "@semantic-release/gitlab",
-        "gitlabUrl": "https://module.kopaxgroup.com"
-      },
-      {
-        "path": "@semantic-release/exec",
-        "cmd": "npx @yeutech/rollup-umd-ci-release-transitive publish ${nextRelease.version}"
+        "path": "@semantic-release/github",
+        "assets": [
+          {
+            "path": "package.json"
+          },
+          {
+            "path": "LICENSE.md"
+          },
+          {
+            "path": "CHANGELOG.md"
+          },
+          {
+            "path": "README.md"
+          },
+          {
+            "path": "dist/*.esm.js",
+            "label": "ES module"
+          },
+          {
+            "path": "dist/*.esm.js.map",
+            "label": "ES module source map"
+          },
+          {
+            "path": "dist/*.min.js",
+            "label": "UMD compressed"
+          },
+          {
+            "path": "dist/*.min.js.map",
+            "label": "UMD compressed source map"
+          },
+          {
+            "path": "dist/*.cjs.min.js",
+            "label": "CJS compressed"
+          },
+          {
+            "path": "dist/*.cjs.min.js.map",
+            "label": "CJS compressed source map"
+          },
+          {
+            "path": "lib/*.js",
+            "label": "CJS folder"
+          }
+        ]
       }
     ]
   },
@@ -349,21 +369,5 @@
     ]
   },
   "declinationId": "react",
-  "contributors": [],
-  "transitive": {
-    "name": "react-cookiebot",
-    "scopedName": "react-cookiebot",
-    "homepage": "https://yeutech-lab.github.io/react-cookiebot",
-    "repository": {
-      "type": "git",
-      "url": "https://github.com/yeutech-lab/react-cookiebot.git"
-    },
-    "bugs": {
-      "url": "https://github.com/yeutech-lab/react-cookiebot/issues"
-    },
-    "publishConfig": {
-      "access": "public",
-      "registry": "https://registry.npmjs.org"
-    }
-  }
+  "contributors": []
 }
