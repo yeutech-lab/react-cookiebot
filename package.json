@@ -1,6 +1,6 @@
 {
   "name": "@yeutech/react-cookiebot",
-  "version": "0.0.0-development",
+  "version": "1.0.0",
   "description": "Cookiebot component for react and react native application",
   "main": "lib/index.js",
   "homepage": "https://yeutech.yeutech.com/react-cookiebot",
@@ -35,7 +35,8 @@
     "jsdoc": "jsdoc-documentation --file",
     "prestyleguide": "npm run jsdoc",
     "styleguide": "styleguidist server",
-    "styleguide:build": "styleguidist build"
+    "styleguide:build": "styleguidist build",
+    "postinstall": "node -e \"console.log('\\u001b[31m@yeutech/react-cookiebot is deprecated, use react-cookiebot instead.')\" || exit 0"
   },
   "repository": {
     "type": "git",
