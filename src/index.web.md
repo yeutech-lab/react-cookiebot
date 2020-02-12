@@ -2,7 +2,7 @@ This is how it should be used:
 
 ```js
 import { View, Text } from 'react-native';
-const domainGroupId = '7d6b1a1e-8030-4f45-877e-21bb51e9233b';
+const domainGroupId = 'ecff8d69-d1cb-416f-a86f-ba55b3f38707';
 
 function App() {
   return (
