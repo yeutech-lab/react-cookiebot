@@ -9,18 +9,16 @@
 [![Module formats](https://img.shields.io/badge/module%20formats-umd%2C%20cjs%2C%20esm-green.svg?style=flat)](https://www.npmjs.com/package/react-cookiebot)
 [![Coverage](https://sonarcloud.io/api/project_badges/measure?project=com.github.yeutech-lab.react-cookiebot&metric=coverage)](https://sonarcloud.io/dashboard?id=com.github.yeutech-lab.react-cookiebot) [![Quality gate status](https://sonarcloud.io/api/project_badges/measure?project=com.github.yeutech-lab.react-cookiebot&metric=alert_status)](https://sonarcloud.io/dashboard?id=com.github.yeutech-lab.react-cookiebot)
 
-
-Cookiebot component for react and react native application
-
+A simple react cookie bot component that configure Cookiebot in your [`react`](https://reactjs.org/) or [`react-native-web`](https://github.com/necolas/react-native-web/) application.
 
 ## Table of Contents
 
   - [What is cookie bot ?](#what-is-cookie-bot)
   - [Demo](#demo)
-  - [Create a cookie bot account](#create-a-cookie-bot-account)
-  - [Configuration](#configuration)
   - [Usage](#usage)
   - [Documentation](#documentation)
+  - [Create a cookie bot account](#create-a-cookie-bot-account)
+  - [Configuration](#configuration)
   - [Contributing](#contributing)
   - [License MIT](#license-mit)
 
@@ -30,16 +28,49 @@ Cookiebot component for react and react native application
 
 COOKIEBOT HELPS MAKE YOUR USE OF COOKIES AND ONLINE TRACKING COMPLIANT.
 
-Is my website compliant?
 The General Data Protection Regulation (GDPR) applies to all websites with users from the EU. Check if your website’s use of cookies and online tracking is compliant with GDPR and the ePrivacy Directive (ePR). 
 
 See what data your website collects and shares with 3rd parties – also useful for CCPA compliance (California Consumer Privacy Act).
 
-Visit their [website](https://www.cookiebot.com)
+Visit Cookiebot [website](https://www.cookiebot.com)
 
 ## Demo
 
 View the [Demo](https://yeutech-lab.github.io/react-cookiebot/)
+
+## Usage
+
+This is how it should be used:
+
+```js
+ 
+import React, { useState } from 'react';
+import { Button, View, Text } from 'react-native';
+const domainGroupId = 'ecff8d69-d1cb-416f-a86f-ba55b3f38707';
+
+function App() {
+  const [hasCookieBot, setHasCookieBot] = useState(undefined);
+  return (
+    <View style={{ flex: 1, alignItems: 'center' }}>
+      <CookieBot domainGroupId={domainGroupId} />
+      <Text>Click to test Cookiebot</Text>
+      <Button title="TEST" onPress={() => setHasCookieBot(!!document.querySelector('#CookieBot'))} />
+      <Text style={{ color: 'red', marginVertical: 10 }}>
+        {hasCookieBot && `Has CookieBot: ${JSON.stringify(hasCookieBot)}`}
+      </Text>
+    </View>
+  );
+}
+
+<App />
+```
+
+> React CookieBot work with react-native-web. With react-native it will render `null`
+
+## Documentation
+
+Read [react-cookiebot documentation](https://yeutech-lab.github.io/react-cookiebot).
+
 
 ## Create a cookie bot account
 
@@ -84,39 +115,6 @@ Configure webpack to load extensions `['.web.js', '.js']`:
   }
 }
 ```
-
-## Usage
-
-This is how it should be used:
-
-```js
- 
-import React, { useState } from 'react';
-import { Button, View, Text } from 'react-native';
-const domainGroupId = 'ecff8d69-d1cb-416f-a86f-ba55b3f38707';
-
-function App() {
-  const [hasCookieBot, setHasCookieBot] = useState(undefined);
-  return (
-    <View style={{ flex: 1, alignItems: 'center' }}>
-      <CookieBot domainGroupId={domainGroupId} />
-      <Text>Click to test Cookiebot</Text>
-      <Button title="TEST" onPress={() => setHasCookieBot(!!document.querySelector('#CookieBot'))} />
-      <Text style={{ color: 'red', marginVertical: 10 }}>
-        {hasCookieBot && `Has CookieBot: ${JSON.stringify(hasCookieBot)}`}
-      </Text>
-    </View>
-  );
-}
-
-<App />
-```
-
-> React CookieBot work with react-native-web. With react-native it will render `null`
-
-## Documentation
-
-Read [react-cookiebot documentation](https://yeutech-lab.github.io/react-cookiebot).
 
 ## Contributing
 
