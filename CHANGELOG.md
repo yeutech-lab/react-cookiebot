@@ -1,3 +1,10 @@
+## [1.0.4](https://github.com/yeutech-lab/react-cookiebot/compare/v1.0.3...v1.0.4) (2020-02-12)
+
+
+### Bug Fixes
+
+* **documentation:** improve order ([84d2cc2](https://github.com/yeutech-lab/react-cookiebot/commit/84d2cc25e7d0d054d45c687c19f4ab27d4e4aa86))
+
 ## [1.0.3](https://github.com/yeutech-lab/react-cookiebot/compare/v1.0.2...v1.0.3) (2020-02-12)
 
 
