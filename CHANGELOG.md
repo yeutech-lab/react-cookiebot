@@ -1,3 +1,10 @@
+## [1.0.6](https://github.com/yeutech-lab/react-cookiebot/compare/v1.0.5...v1.0.6) (2020-02-15)
+
+
+### Bug Fixes
+
+* **(demo:** improve demo text ([5c2c43e](https://github.com/yeutech-lab/react-cookiebot/commit/5c2c43e128f1b857328646d19fd9dacfc3bacb2b))
+
 ## [1.0.5](https://github.com/yeutech-lab/react-cookiebot/compare/v1.0.4...v1.0.5) (2020-02-15)
 
 
