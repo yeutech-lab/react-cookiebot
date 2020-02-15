@@ -1,4 +1,4 @@
-This is how it should be used:
+Just import `<CookieBot domainGroupId={domainGroupId} />`, this example show how to use it and how to test if it is correctly injected in the page:
 
 ```js
  
@@ -23,4 +23,4 @@ function App() {
 <App />
 ```
 
-> React CookieBot work with react-native-web.
+> React CookieBot work with react-native-web, configure your resolve extensions to resolve `.web.js` and `.js`.
