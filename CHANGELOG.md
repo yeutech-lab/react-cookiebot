@@ -1,3 +1,10 @@
+## [1.0.5](https://github.com/yeutech-lab/react-cookiebot/compare/v1.0.4...v1.0.5) (2020-02-15)
+
+
+### Bug Fixes
+
+* **CookieBot:** never render if no DOM ([a875d3c](https://github.com/yeutech-lab/react-cookiebot/commit/a875d3c06d31619d85efda16812c7717fcea6e09))
+
 ## [1.0.4](https://github.com/yeutech-lab/react-cookiebot/compare/v1.0.3...v1.0.4) (2020-02-12)
 
 
