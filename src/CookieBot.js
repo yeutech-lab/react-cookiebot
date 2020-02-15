@@ -10,7 +10,7 @@ import PropTypes from 'prop-types';
 function CookieBot({
   domainGroupId,
 }) {
-  if (!domainGroupId) {
+  if (!domainGroupId || !document) {
     return null;
   }
   if (domainGroupId.length !== 36) {
