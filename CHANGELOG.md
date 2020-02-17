@@ -1,3 +1,10 @@
+## [1.0.7](https://github.com/yeutech-lab/react-cookiebot/compare/v1.0.6...v1.0.7) (2020-02-17)
+
+
+### Bug Fixes
+
+* **dependencies:** upgrade all dependencies and added using CookieBot.native.js instead of MainField ([e54fa16](https://github.com/yeutech-lab/react-cookiebot/commit/e54fa16cb7b6b46deac9b1dea5a1193bb23db621))
+
 ## [1.0.6](https://github.com/yeutech-lab/react-cookiebot/compare/v1.0.5...v1.0.6) (2020-02-15)
 
 
