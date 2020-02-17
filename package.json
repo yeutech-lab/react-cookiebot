@@ -192,7 +192,7 @@
     "@semantic-release/changelog": "^5.0.0",
     "@semantic-release/git": "^9.0.0",
     "@semantic-release/github": "^7.0.3",
-    "@semantic-release/npm": "^7.0.2",
+    "@semantic-release/npm": "^7.0.3",
     "@yeutech-lab/documentation": "^2.0.2",
     "@yeutech-lab/test-polyfill": "^1.1.5",
     "babel-eslint": "^10.0.3",
@@ -224,7 +224,7 @@
     "raf": "^3.4.1",
     "react": "^16.12.0",
     "react-test-renderer": "^16.12.0",
-    "semantic-release": "^17.0.2",
+    "semantic-release": "^17.0.3",
     "toctoc": "^0.3.2",
     "webpack": "^4.41.6"
   },

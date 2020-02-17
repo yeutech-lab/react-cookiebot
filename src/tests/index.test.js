@@ -3,8 +3,8 @@
  */
 import { shallow } from 'enzyme';
 import React from 'react';
-import CookieBot from '../index';
-import CookieBotWeb from '../index.web';
+import CookieBot from '../CookieBot.native';
+import CookieBotWeb from '../CookieBot';
 
 const renderComponentNative = ({ domainGroupId, ...rest } = {}) => shallow(
   <CookieBot domainGroupId={domainGroupId} {...rest} />
