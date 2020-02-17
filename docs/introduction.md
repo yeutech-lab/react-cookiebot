@@ -7,6 +7,11 @@
 
 $PACKAGE_DESCRIPTION
 
+> That will definitely work. It's also a good way to dynamically add/modify attributes.
+> It's important that the script is the first to load though, to make sure nothing else loads first and can cause issues.
+> Richard, Cookiebot Support
+
+
 ## COOKIEBOT HELPS MAKE YOUR USE OF COOKIES AND ONLINE TRACKING COMPLIANT.
 
 The General Data Protection Regulation (GDPR) applies to all websites with users from the EU. Check if your website’s use of cookies and online tracking is compliant with GDPR and the ePrivacy Directive (ePR). 

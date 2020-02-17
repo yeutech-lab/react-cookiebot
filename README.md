@@ -11,6 +11,10 @@
 
 A simple react cookie bot component that configure Cookiebot in your [`react`](https://reactjs.org/) or [`react-native-web`](https://github.com/necolas/react-native-web/) application.
 
+> That will definitely work. It's also a good way to dynamically add/modify attributes.
+> It's important that the script is the first to load though, to make sure nothing else loads first and can cause issues.
+> Richard, Cookiebot Support
+
 ## Table of Contents
 
   - [What is cookie bot ?](#what-is-cookie-bot)
