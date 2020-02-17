@@ -1,3 +1,10 @@
+## [1.0.8](https://github.com/yeutech-lab/react-cookiebot/compare/v1.0.7...v1.0.8) (2020-02-17)
+
+
+### Bug Fixes
+
+* **typo:** fix typo blockingmog => blockingmode ([cc6a6b9](https://github.com/yeutech-lab/react-cookiebot/commit/cc6a6b938dd8bed86bd43115600c774b022f111d))
+
 ## [1.0.7](https://github.com/yeutech-lab/react-cookiebot/compare/v1.0.6...v1.0.7) (2020-02-17)
 
 
