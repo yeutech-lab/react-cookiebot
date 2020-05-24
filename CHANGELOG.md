@@ -1,3 +1,38 @@
+## [1.0.8](https://github.com/yeutech-lab/react-cookiebot/compare/v1.0.7...v1.0.8) (2020-02-17)
+
+
+### Bug Fixes
+
+* **typo:** fix typo blockingmog => blockingmode ([cc6a6b9](https://github.com/yeutech-lab/react-cookiebot/commit/cc6a6b938dd8bed86bd43115600c774b022f111d))
+
+## [1.0.7](https://github.com/yeutech-lab/react-cookiebot/compare/v1.0.6...v1.0.7) (2020-02-17)
+
+
+### Bug Fixes
+
+* **dependencies:** upgrade all dependencies and added using CookieBot.native.js instead of MainField ([e54fa16](https://github.com/yeutech-lab/react-cookiebot/commit/e54fa16cb7b6b46deac9b1dea5a1193bb23db621))
+
+## [1.0.6](https://github.com/yeutech-lab/react-cookiebot/compare/v1.0.5...v1.0.6) (2020-02-15)
+
+
+### Bug Fixes
+
+* **(demo:** improve demo text ([5c2c43e](https://github.com/yeutech-lab/react-cookiebot/commit/5c2c43e128f1b857328646d19fd9dacfc3bacb2b))
+
+## [1.0.5](https://github.com/yeutech-lab/react-cookiebot/compare/v1.0.4...v1.0.5) (2020-02-15)
+
+
+### Bug Fixes
+
+* **CookieBot:** never render if no DOM ([a875d3c](https://github.com/yeutech-lab/react-cookiebot/commit/a875d3c06d31619d85efda16812c7717fcea6e09))
+
+## [1.0.4](https://github.com/yeutech-lab/react-cookiebot/compare/v1.0.3...v1.0.4) (2020-02-12)
+
+
+### Bug Fixes
+
+* **documentation:** improve order ([84d2cc2](https://github.com/yeutech-lab/react-cookiebot/commit/84d2cc25e7d0d054d45c687c19f4ab27d4e4aa86))
+
 ## [1.0.3](https://github.com/yeutech-lab/react-cookiebot/compare/v1.0.2...v1.0.3) (2020-02-12)
 
 
