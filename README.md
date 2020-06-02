@@ -8,6 +8,7 @@
 [![npm Version](https://img.shields.io/node/v/react-cookiebot.svg?style=flat)](https://www.npmjs.com/package/react-cookiebot)
 [![Module formats](https://img.shields.io/badge/module%20formats-umd%2C%20cjs%2C%20esm-green.svg?style=flat)](https://www.npmjs.com/package/react-cookiebot)
 [![Coverage](https://sonarcloud.io/api/project_badges/measure?project=com.github.yeutech-lab.react-cookiebot&metric=coverage)](https://sonarcloud.io/dashboard?id=com.github.yeutech-lab.react-cookiebot) [![Quality gate status](https://sonarcloud.io/api/project_badges/measure?project=com.github.yeutech-lab.react-cookiebot&metric=alert_status)](https://sonarcloud.io/dashboard?id=com.github.yeutech-lab.react-cookiebot)
+[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2Fyeutech-lab%2Freact-cookiebot.svg?type=shield)](https://app.fossa.com/projects/git%2Bgithub.com%2Fyeutech-lab%2Freact-cookiebot?ref=badge_shield)
 
 A simple react cookie bot component that configure Cookiebot in your [`react`](https://reactjs.org/) or [`react-native-web`](https://github.com/necolas/react-native-web/) application.
 
@@ -27,6 +28,9 @@ A simple react cookie bot component that configure Cookiebot in your [`react`](h
   - [License MIT](#license-mit)
 
 ---
+
+
+[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2Fyeutech-lab%2Freact-cookiebot.svg?type=large)](https://app.fossa.com/projects/git%2Bgithub.com%2Fyeutech-lab%2Freact-cookiebot?ref=badge_large)
 
 ## What is cookie bot ?
 
@@ -136,4 +140,3 @@ Permission is hereby granted, free of charge, to any person obtaining a copy of 
 The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
 
 THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
-
