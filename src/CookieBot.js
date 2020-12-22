@@ -4,12 +4,17 @@ import PropTypes from 'prop-types';
 /**
  * Enable cookie bot on the website
  * @param {string} domainGroupId - Cookie bot domain group id
+ * @param {string} language - Cookie bot data culture
  * @returns {*|null}
  * @constructor
  */
 function CookieBot({
   domainGroupId,
+  language,
 }) {
+  if (typeof window === 'undefined') {
+    return null;
+  }
   if (!domainGroupId || !document) {
     return null;
   }
@@ -22,6 +27,9 @@ function CookieBot({
   script.setAttribute('data-cbid', domainGroupId);
   script.setAttribute('data-blockingmode', 'auto');
   script.setAttribute('type', 'text/javascript');
+  if (language) {
+    script.setAttribute('data-culture', language);
+  }
   const head = document.querySelector('html > head');
   head.insertBefore(script, head.firstChild);
   return (
@@ -29,14 +37,22 @@ function CookieBot({
       id="CookieDeclaration"
       src={`https://consent.cookiebot.com/${domainGroupId}/cd.js`}
       type="text/javascript"
+      data-culture={language}
       async
     />
   );
 }
 
+CookieBot.defaultProps = {
+  domainGroupId: undefined,
+  language: undefined,
+};
+
 CookieBot.propTypes = {
   /** Cookie bot domain group id */
-  domainGroupId: PropTypes.string.isRequired,
+  domainGroupId: PropTypes.string,
+  /** Cookie bot language */
+  language: PropTypes.string,
 };
 
 export default CookieBot;

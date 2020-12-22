@@ -8,6 +8,7 @@
 [![npm Version](https://img.shields.io/node/v/react-cookiebot.svg?style=flat)](https://www.npmjs.com/package/react-cookiebot)
 [![Module formats](https://img.shields.io/badge/module%20formats-umd%2C%20cjs%2C%20esm-green.svg?style=flat)](https://www.npmjs.com/package/react-cookiebot)
 [![Coverage](https://sonarcloud.io/api/project_badges/measure?project=com.github.yeutech-lab.react-cookiebot&metric=coverage)](https://sonarcloud.io/dashboard?id=com.github.yeutech-lab.react-cookiebot) [![Quality gate status](https://sonarcloud.io/api/project_badges/measure?project=com.github.yeutech-lab.react-cookiebot&metric=alert_status)](https://sonarcloud.io/dashboard?id=com.github.yeutech-lab.react-cookiebot)
+[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2Fyeutech-lab%2Freact-cookiebot.svg?type=shield)](https://app.fossa.com/projects/git%2Bgithub.com%2Fyeutech-lab%2Freact-cookiebot?ref=badge_shield)
 
 A simple react cookie bot component that configure Cookiebot in your [`react`](https://reactjs.org/) or [`react-native-web`](https://github.com/necolas/react-native-web/) application.
 
@@ -23,10 +24,14 @@ A simple react cookie bot component that configure Cookiebot in your [`react`](h
   - [Documentation](#documentation)
   - [Create a cookie bot account](#create-a-cookie-bot-account)
   - [Configuration](#configuration)
+     - [Consent banner/dialog language](#consent-banner-dialog-language)
   - [Contributing](#contributing)
   - [License MIT](#license-mit)
 
 ---
+
+
+[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2Fyeutech-lab%2Freact-cookiebot.svg?type=large)](https://app.fossa.com/projects/git%2Bgithub.com%2Fyeutech-lab%2Freact-cookiebot?ref=badge_large)
 
 ## What is cookie bot ?
 
@@ -121,6 +126,22 @@ Configure webpack to load extensions `['.web.js', '.js']`:
 }
 ```
 
+### Consent banner/dialog language
+
+If you want to force the language of consent (for i18n):
+
+```js
+  <CookieBot domainGroupId={domainGroupId} language="ES" />
+```
+
+If consent with that language is no defined, the default language are loaded (or auto-detect).
+
+### Use it once
+
+You must render this component at the root of your application, otherwise make sure your parent component does not re-rerender.
+
+The following will appear in your console if you break `react-cookiebot`: `WARNING: Cookiebot script is included twice - please remove one instance to avoid unexpected results.`
+
 ## Contributing
 
 If you want to contribute to react-cookiebot please see our [contributing and community guidelines](https://github.com/yeutech-lab/react-cookiebot/blob/master/.github/CONTRIBUTING.md), they\'ll help you get set up locally and explain the whole process.
@@ -136,4 +157,3 @@ Permission is hereby granted, free of charge, to any person obtaining a copy of 
 The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
 
 THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
-
