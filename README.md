@@ -24,6 +24,7 @@ A simple react cookie bot component that configure Cookiebot in your [`react`](h
   - [Documentation](#documentation)
   - [Create a cookie bot account](#create-a-cookie-bot-account)
   - [Configuration](#configuration)
+     - [Consent banner/dialog language](#consent-banner-dialog-language)
   - [Contributing](#contributing)
   - [License MIT](#license-mit)
 
