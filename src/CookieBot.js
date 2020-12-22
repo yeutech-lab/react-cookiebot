@@ -12,6 +12,9 @@ function CookieBot({
   domainGroupId,
   language,
 }) {
+  if (typeof window === 'undefined') {
+    return null;
+  }
   if (!domainGroupId || !document) {
     return null;
   }
