@@ -1,3 +1,10 @@
+## [1.0.9](https://github.com/yeutech-lab/react-cookiebot/compare/v1.0.8...v1.0.9) (2020-12-22)
+
+
+### Bug Fixes
+
+* **dependencies:** upgrade all dependencies and added some test for [#19](https://github.com/yeutech-lab/react-cookiebot/issues/19) ([96575b4](https://github.com/yeutech-lab/react-cookiebot/commit/96575b4f4f0c1b90b24fd3279732e1291353df59))
+
 ## [1.0.8](https://github.com/yeutech-lab/react-cookiebot/compare/v1.0.7...v1.0.8) (2020-02-17)
 
 
