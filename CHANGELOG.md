@@ -1,3 +1,10 @@
+## [1.0.10](https://github.com/yeutech-lab/react-cookiebot/compare/v1.0.9...v1.0.10) (2020-12-22)
+
+
+### Bug Fixes
+
+* **ssr:** return null when SSR ([d296bb9](https://github.com/yeutech-lab/react-cookiebot/commit/d296bb94a3a5a1f02527c800e01949c93398c259))
+
 ## [1.0.9](https://github.com/yeutech-lab/react-cookiebot/compare/v1.0.8...v1.0.9) (2020-12-22)
 
 
