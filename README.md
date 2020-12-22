@@ -136,6 +136,12 @@ If you want to force the language of consent (for i18n):
 
 If consent with that language is no defined, the default language are loaded (or auto-detect).
 
+### Use it once
+
+You must render this component at the root of your application, otherwise make sure your parent component does not re-rerender.
+
+The following will appear in your console if you break `react-cookiebot`: `WARNING: Cookiebot script is included twice - please remove one instance to avoid unexpected results.`
+
 ## Contributing
 
 If you want to contribute to react-cookiebot please see our [contributing and community guidelines](https://github.com/yeutech-lab/react-cookiebot/blob/master/.github/CONTRIBUTING.md), they\'ll help you get set up locally and explain the whole process.
