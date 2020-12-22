@@ -9,6 +9,7 @@ import PropTypes from 'prop-types';
  */
 function CookieBot({
   domainGroupId,
+  language,
 }) {
   if (!domainGroupId || !document) {
     return null;
@@ -22,6 +23,7 @@ function CookieBot({
   script.setAttribute('data-cbid', domainGroupId);
   script.setAttribute('data-blockingmode', 'auto');
   script.setAttribute('type', 'text/javascript');
+  if (language) script.setAttribute('data-culture', language);
   const head = document.querySelector('html > head');
   head.insertBefore(script, head.firstChild);
   return (
@@ -29,14 +31,21 @@ function CookieBot({
       id="CookieDeclaration"
       src={`https://consent.cookiebot.com/${domainGroupId}/cd.js`}
       type="text/javascript"
+      data-culture={language}
       async
     />
   );
 }
 
+CookieBot.defaultProps = {
+  language: null,
+};
+
 CookieBot.propTypes = {
   /** Cookie bot domain group id */
   domainGroupId: PropTypes.string.isRequired,
+  /** Cookie bot language */
+  language: PropTypes.string,
 };
 
 export default CookieBot;

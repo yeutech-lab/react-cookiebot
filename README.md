@@ -125,6 +125,16 @@ Configure webpack to load extensions `['.web.js', '.js']`:
 }
 ```
 
+### Consent banner/dialog language
+
+If you want to force the language of consent (for i18n):
+
+```js
+  <CookieBot domainGroupId={domainGroupId} language="ES" />
+```
+
+If consent with that language is no defined, the default language are loaded (or auto-detect).
+
 ## Contributing
 
 If you want to contribute to react-cookiebot please see our [contributing and community guidelines](https://github.com/yeutech-lab/react-cookiebot/blob/master/.github/CONTRIBUTING.md), they\'ll help you get set up locally and explain the whole process.
