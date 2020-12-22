@@ -12,6 +12,10 @@ function CookieBot({
   domainGroupId,
   language,
 }) {
+  /* istanbul ignore next */
+  if (typeof window === 'undefined') {
+    return null;
+  }
   if (!domainGroupId || !document) {
     return null;
   }
