@@ -24,6 +24,7 @@ A simple react cookie bot component that configure Cookiebot in your [`react`](h
   - [Documentation](#documentation)
   - [Create a cookie bot account](#create-a-cookie-bot-account)
   - [Configuration](#configuration)
+     - [Consent banner/dialog language](#consent-banner-dialog-language)
   - [Contributing](#contributing)
   - [License MIT](#license-mit)
 
@@ -124,6 +125,16 @@ Configure webpack to load extensions `['.web.js', '.js']`:
   }
 }
 ```
+
+### Consent banner/dialog language
+
+If you want to force the language of consent (for i18n):
+
+```js
+  <CookieBot domainGroupId={domainGroupId} language="ES" />
+```
+
+If consent with that language is no defined, the default language are loaded (or auto-detect).
 
 ## Contributing
 
