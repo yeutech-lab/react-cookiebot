@@ -58,16 +58,15 @@ describe('<CookieBot />', () => {
     expect(renderedComponent.length).toBe(1);
     expect(console.warn).toHaveBeenCalledWith(`The cookie bot domain group id is ${domainGroupId.length} characters, instead it should be 36 characters!`);
   });
-  // it('should return null when document is not defined', () => {
-  //   const oldDocument = global.document;
-  //   global.document = {};
-  //   const domainGroupId = '7d6b1a1e-8077e-21bb51e9233b';
-  //   const renderedComponent = renderComponentWeb({
-  //     domainGroupId,
-  //   });
-  //   const cookieDeclaration = renderedComponent.find('#CookieDeclaration');
-  //   expect(renderedComponent.length).toBe(1);
-  //   expect(cookieDeclaration.length).toBe(0);
-  //   global.document = oldDocument;
-  // });
+  it('should render a culture', () => {
+    const renderedComponent = renderComponentWeb({
+      ...props,
+      language: 'ES',
+    });
+    const cookieDeclaration = renderedComponent.find('#CookieDeclaration');
+    expect(renderedComponent.length).toBe(1);
+    expect(cookieDeclaration.length).toBe(1);
+    expect(renderedComponent.prop('data-culture')).toBe('ES');
+    expect(cookieDeclaration.prop('data-culture')).toBe('ES');
+  });
 });
